@@ -2,6 +2,7 @@ package com.example.testegraficos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -9,6 +10,8 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
@@ -51,6 +54,20 @@ public class MainActivity extends AppCompatActivity {
 
         barChart.animateY(5000);
 
+        barChart.getDescription().setText("Descricao");
+        barChart.getDescription().setTextColor(Color.BLUE);
 
+
+        PieDataSet pieDataSet = new PieDataSet(pieEntries,"Grafico 2");
+
+        pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+        pieDataSet.setDrawValues(false);
+
+        pieChart.setData(new PieData(pieDataSet));
+
+        pieChart.animateY(5000);
+
+        pieChart.getDescription().setText("Descricao");
+        pieChart.getDescription().setTextColor(Color.BLUE);
     }
 }
