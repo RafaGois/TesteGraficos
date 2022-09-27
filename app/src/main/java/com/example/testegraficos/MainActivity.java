@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     BarChart barChart;
     PieChart pieChart;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<BarEntry> barEntries = new ArrayList<>();
         ArrayList<PieEntry> pieEntries = new ArrayList<>();
 
+        //entidade e valor
         for (int i = 0; i < 10;i++) {
             float value = (float) (i * 10.0);
 
@@ -67,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         pieChart.animateY(5000);
 
-        pieChart.getDescription().setText("Descricao");
+        pieChart.getDescription().setText("Descricao dois");
         pieChart.getDescription().setTextColor(Color.BLUE);
     }
 }
