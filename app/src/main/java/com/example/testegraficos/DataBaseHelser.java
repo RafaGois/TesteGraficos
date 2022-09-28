@@ -26,7 +26,7 @@ public class DataBaseHelser extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String query = "CREATE TABLE "+ nomeTabela
-                + "(id INTEGER primary key autoincrement, datetime TEXT, categoria TEXT, valor FLOAT, turno INTEGER)";
+                + "(id INTEGER primary key autoincrement, data TEXT, categoria TEXT, valor FLOAT, turno INTEGER)";
 
         sqLiteDatabase.execSQL(query);
     }
