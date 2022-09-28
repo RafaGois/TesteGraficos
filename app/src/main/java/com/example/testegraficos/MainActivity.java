@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     BarChart barChart;
     PieChart pieChart;
 
-
+//teste computador do rafaaaaa
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
